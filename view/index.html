@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+  <script src="three.js"></script>
+  <script src="OrbitControls.js"></script>
+  <style>
+    html {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      padding: 0px;
+      margin: 0px;
+      background-color: rgba(0, 0, 0, 0);
+      /* border: 1px solid #68217A;
+      border-bottom: 24px solid #68217A;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px; */
+      overflow: hidden;
+    }
+
+    #title-bar {
+      -webkit-app-region: drag;
+      height: 32px;
+      padding: 0px;
+      margin: 0px;
+      background-color: #FF6000;
+      font-family: sans-serif;
+      color: #0060FF;
+      font-weight: bold;
+    }
+
+    #title {
+      position: fixed;
+      top: 0px;
+      left: 12px;
+      line-height: 32px;
+      font-size: 14px;
+    }
+
+    #title-bar-btns {
+      -webkit-app-region: no-drag;
+      position: fixed;
+      top: 0px;
+      right: 0px;
+    }
+
+    #title-bar-btns button {
+      height: 32px;
+      width: 32px;
+      background-color: transparent;
+      border: none;
+      color: #F1F1F1;
+      font-size: 16px;
+    }
+
+    #title-bar-btns button:hover {
+      background-color: #3F3F41;
+    }
+
+    #content {
+      padding: 12px;
+      color: #CCCCCC;
+    }
+
+    a {
+      color: #6844FF;
+      text-decoration: none;
+    }
+
+    div#commands{
+      background-color: #00FFAA;
+    }
+    #commands button {
+      height: 32px;
+      width: 128px;
+      background-color: #222;
+      border: none;
+      color: #F1F1F1;
+      font-size: 24px;
+    }
+
+    #commands button:hover {
+      background-color: #3F3F41;
+    }
+
+    input#logname{
+      font-style: italic;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div id="title-bar">
+    <div id="title">SCR Lidar SLAM A3</div>
+    <div id="title-bar-btns">
+      <button id="min-btn">&downarrow;</button>
+      <button id="max-btn">&square;</button>
+      <button id="close-btn">x</button>
+    </div>
+
+  </div>
+
+  <div id="commands">
+    <button id="run"><a href="#">start</a></button>
+    <span id="status">DISCONNECTED</span>
+    <input type="checkbox" id="log"> 
+    <span>Logging</span> || 
+    <input type="text" id="logname" value="type log label">
+  </div>
+  <div id="view">
+  </div>
+  <script type="text/javascript" src="./renderer.js"></script>
+  <script type="text/javascript" src="./comms.js"></script>
+
+</body>
+
+</html>
